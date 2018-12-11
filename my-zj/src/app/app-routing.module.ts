@@ -11,7 +11,7 @@ import { UnsaveGuard } from './guard/unsave.guard';
 
 const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
-  {path: 'personalInfo', component: PersonalInfoComponent},
+  {path: 'personalInfo', component: PersonalInfoComponent,canActivate: [LoginGuard]},
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
   {path: 'personalInfoShow', component: PersonalInfoShowComponent, canActivate: [LoginGuard]},
   {
