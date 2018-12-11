@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class AppService {
 
   private inputData: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   set inputValue(value) {
     this.inputData = value;

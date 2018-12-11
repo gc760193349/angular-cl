@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OneChildComponent } from './one-child.component';
+import { NofoundComponent } from './nofound.component';
 
-describe('OneChildComponent', () => {
-  let component: OneChildComponent;
-  let fixture: ComponentFixture<OneChildComponent>;
+describe('NofoundComponent', () => {
+  let component: NofoundComponent;
+  let fixture: ComponentFixture<NofoundComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OneChildComponent ]
+      declarations: [ NofoundComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OneChildComponent);
+    fixture = TestBed.createComponent(NofoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,8 +1,16 @@
 
-
-.swiper-container{
-  width: 500px;
-  height: 100px;
-  line-height: 100px;
+div {
+  width: 200px;
+  margin: 0 auto;
   text-align: center;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  float: left;
+  color: #282767;
+}
+a:hover{
+  cursor: pointer;
 }

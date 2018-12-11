@@ -1,30 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
+import { Form, FormsModule } from '@angular/forms';
 
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OneChildComponent } from './one-child/one-child.component';
-import { TwoChildComponent } from './two-child/two-child.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { PersonalInfoShowComponent } from './personal-info-show/personal-info-show.component';
 import { from } from 'rxjs';
-import { ThreeChildComponent } from './three-child/three-child.component';
-import {LocalStorage} from '../local.storage';
-
-
-
-
+import { PersonalInfoAlterComponent } from './personal-info-alter/personal-info-alter.component';
+// import {LocalStorage} from "../local.storage";
+import { HomepageComponent } from './homepage/homepage.component';
+import { NofoundComponent } from './nofound/nofound.component';
 @NgModule({
   declarations: [
     AppComponent,
-    OneChildComponent,
-    TwoChildComponent,
-    ThreeChildComponent
+    PersonalInfoComponent,
+    PersonalInfoShowComponent,
+    PersonalInfoAlterComponent,
+    HomepageComponent,
+    NofoundComponent,
+    // LocalStorage,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    AppRoutingModule
   ],
   providers: [
     AppService,
@@ -32,4 +33,5 @@ import {LocalStorage} from '../local.storage';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
