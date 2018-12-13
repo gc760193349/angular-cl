@@ -1,0 +1,14 @@
+<div>
+  <div class="float">
+    <button (click)="getGData()">全局</button>
+    <ul *ngFor="let c of globalData">
+      <li>{{c}}</li>
+    </ul>
+  </div>
+  <div class="float">
+    <button (click)="getAData()">局部</button>
+    <ul *ngFor="let i of moentData">
+      <li>{{i}}</li>
+    </ul>
+  </div>
+</div>

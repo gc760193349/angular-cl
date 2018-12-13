@@ -12,7 +12,7 @@ export class LoginGuard implements CanActivate {
       } else {
         return true;
       }
-    } else if (state.url === '/personalInfoShow' || state.url === '/personalInfoAlter') {
+    } else if (state.url === '/personalInfoShow' || state.url === '/personalInfoAlter' || state.url === '/train') {
       // 已经登录
       if (localStorage.getItem('test')) {
         return true;

@@ -1,0 +1,8 @@
+.float{
+  margin-top: 100px;
+  float: left;
+  width: 50%;
+}
+button{
+  width: 100%;
+}

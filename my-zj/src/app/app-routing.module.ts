@@ -8,6 +8,10 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { NofoundComponent } from './nofound/nofound.component';
 import { CheckGuard, LoginGuard } from "./guard/login.guard";
 import { UnsaveGuard } from './guard/unsave.guard';
+import {TrainComponent} from "./train/train.component";
+import {TrainOneComponent} from "./train/train-one/train-one.component";
+import {TrainTwoComponent} from "./train/train-two/train-two.component";
+import {TrainThreeComponent} from "./train/train-three/train-three.component";
 
 const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
@@ -20,6 +24,12 @@ const routes: Routes = [
     canActivate: [LoginGuard],
     canDeactivate: [UnsaveGuard]
   },
+  {path:'train',component:TrainComponent,canActivate: [LoginGuard],children:[
+      {path:'train-one',component:TrainOneComponent},
+      {path:'train-two',component:TrainTwoComponent},
+      {path:'train-three',component:TrainThreeComponent},
+    ]},
+
   {path: 'noFound', component: NofoundComponent},
   {path: '**', component: NofoundComponent}
 ];

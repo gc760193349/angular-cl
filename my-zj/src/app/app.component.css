@@ -1,6 +1,6 @@
 
 div {
-  width: 200px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
@@ -8,8 +8,11 @@ div {
 
 a {
   text-decoration: none;
-  float: left;
   color: #282767;
+  float: left;
+  margin-top: 50px;
+  margin-right: 70px;
+  margin-left: 10px;
 }
 a:hover{
   cursor: pointer;
