@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { interval, Subscription } from "rxjs";
-import {GlobalMoodServiceService} from "../../global-mood-service.service";
+import { GlobalMoodServiceService } from "../../global-mood-service.service";
 
 @Component({
   selector: 'app-train-three',
@@ -8,20 +8,26 @@ import {GlobalMoodServiceService} from "../../global-mood-service.service";
   styleUrls: ['./train-three.component.css']
 })
 
-export class TrainThreeComponent implements OnInit {
-  public intervalTime: 1000;
+export class TrainThreeComponent implements OnInit, OnDestroy {
+  private timeInterval: Subscription;
 
 
-
-  constructor(private globalMoodServiceService:GlobalMoodServiceService) {
+  constructor(private globalMoodServiceService: GlobalMoodServiceService,) {
 
   }
 
   ngOnInit() {
     let show = document.getElementById('text');
-    const time = interval(this.intervalTime);
-    time.subscribe(() =>
-      show.innerHTML = new Date().toString());
+    show.innerHTML = new Date().getFullYear() + "年" + new Date().getMonth() + "月" + new Date().getDay() + "日"
+      + new Date().getHours() + "时" + new Date().getMinutes() + "分" + new Date().getSeconds() + "秒";
+    this.timeInterval = interval(1000).subscribe(() =>
+      show.innerHTML = new Date().getFullYear() + "年" + new Date().getMonth() + "月" + new Date().getDay() + "日" +
+        new Date().getHours() + "时" + new Date().getMinutes() + "分" + new Date().getSeconds() + "秒"
+    )
+  }
 
+  ngOnDestroy() {
+    this.timeInterval.unsubscribe();
+    console.log(1);
   }
 }

@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {PersonalInfoAlterComponent} from './personal-info-alter.component';
+import { PersonalInfoAlterComponent } from './personal-info-alter.component';
 
 describe('PersonalInfoAlterComponent', () => {
   let component: PersonalInfoAlterComponent;

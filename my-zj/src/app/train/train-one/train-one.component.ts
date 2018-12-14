@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainOneComponent implements OnInit {
   data = {
-    numberOne:'',
+    numberOne: '',
   };
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -20,6 +20,7 @@ import { PipeOnePipe } from './train/train-one/pipe-one.pipe';
 import { TrainThreeComponent } from './train/train-three/train-three.component';
 import { TrainFourComponent } from './train/train-four/train-four.component';
 import { GlobalMoodServiceService } from "./global-mood-service.service";
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -21,11 +21,11 @@ export class AppComponent {
     console.log(event);
   }
 
-  public jumpInfo(){
-    if(localStorage.getItem('test') == null){
+  public jumpInfo() {
+    if (localStorage.getItem('test') == null) {
       console.log(localStorage.getItem)
       this.router.navigate(['personalInfo']);
-    }else{
+    } else {
       console.log(localStorage.getItem)
       this.router.navigate(['personalInfoShow']);
     }

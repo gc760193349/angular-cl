@@ -14,9 +14,8 @@ export class MomentMoodServiceService {
     "zhazhazha",
     "dedede"
   ];
+
   constructor() {
 
   }
-
-
 }

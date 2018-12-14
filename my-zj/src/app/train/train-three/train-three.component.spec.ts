@@ -8,9 +8,9 @@ describe('TrainThreeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrainThreeComponent ]
+      declarations: [TrainThreeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

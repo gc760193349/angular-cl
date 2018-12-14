@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PipeOnePipe implements PipeTransform {
 
   transform(value: number, args?: any): string {
-    let money:any = value;
+    let money: any = value;
     const cnNums = new Array('零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖');
     const cnIntRadice = new Array('', '拾', '佰', '仟');
     const cnDecUnits = new Array('角', '分');
@@ -22,14 +22,16 @@ export class PipeOnePipe implements PipeTransform {
 
     if (money == "") {
       return "空";
-    }if (money == "."){
-      return err;
-    }if (money >= 1000){
+    }
+    if (money == ".") {
       return err;
     }
-    if(money.charAt(0) === "-"){
+    if (money >= 1000) {
+      return err;
+    }
+    if (money.charAt(0) === "-") {
       cash = money.slice(1);
-    }else{
+    } else {
       cash = money;
     }
     cash = parseFloat(cash);
@@ -73,18 +75,18 @@ export class PipeOnePipe implements PipeTransform {
       chineseStr += cnIntLast;
     }
 
-    if (decimalNum != ''){
+    if (decimalNum != '') {
       let decLen = decimalNum.length;
-      for(let i=0; i<decLen; i++){
-        let decChar = decimalNum.substr(i,1);
-        if(decChar != '0'){
+      for (let i = 0; i < decLen; i++) {
+        let decChar = decimalNum.substr(i, 1);
+        if (decChar != '0') {
           chineseStr += cnNums[parseInt(decChar)] + cnDecUnits[i];
         }
-        if (decChar == '0' && parseInt(integerNum, 10) > 0){
+        if (decChar == '0' && parseInt(integerNum, 10) > 0) {
           chineseStr += cnNums[parseInt(decChar)] + cnDecUnits[i];
         }
       }
-    }else{
+    } else {
       chineseStr;
     }
     return chineseStr;

@@ -13,12 +13,10 @@ export class TrainTwoComponent implements OnInit {
   momentData = [];
   globalData = [];
 
-
   constructor(
     private moodServe: MomentMoodServiceService,
     private globalServe: GlobalMoodServiceService
   ) {
-
   }
 
   ngOnInit() {

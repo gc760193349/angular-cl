@@ -11,14 +11,13 @@ const GlobalData = [
   "666",
 ];
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalMoodServiceService {
-    public startValue = '开始';
-    public boolean = true;
-    public num = 0;
+  public startValue = '开始';
+  public boolean = true;
+  public num = 0;
   globalData = [];
   private continueSubscription: Subscription;
 
