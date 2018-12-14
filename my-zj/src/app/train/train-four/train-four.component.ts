@@ -10,13 +10,10 @@ declare var AMapUI: any;
 })
 export class TrainFourComponent implements OnInit {
 
-  personalInfo = [];
-
   constructor() {
   }
 
   ngOnInit() {
-    this.personalInfo = localStorage.getItem('test').split(',');
     this.getMap();
   }
 
