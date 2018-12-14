@@ -10,6 +10,7 @@ import { GlobalMoodServiceService } from "../../global-mood-service.service";
 
 export class TrainThreeComponent implements OnInit, OnDestroy {
   private timeInterval: Subscription;
+  private timeshow:string =  '';
 
 
   constructor(private globalMoodServiceService: GlobalMoodServiceService,) {
@@ -17,12 +18,10 @@ export class TrainThreeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    let show = document.getElementById('text');
-    show.innerHTML = new Date().getFullYear() + "年" + new Date().getMonth() + "月" + new Date().getDay() + "日"
-      + new Date().getHours() + "时" + new Date().getMinutes() + "分" + new Date().getSeconds() + "秒";
+
+    this.timeshow = new Date();
     this.timeInterval = interval(1000).subscribe(() =>
-      show.innerHTML = new Date().getFullYear() + "年" + new Date().getMonth() + "月" + new Date().getDay() + "日" +
-        new Date().getHours() + "时" + new Date().getMinutes() + "分" + new Date().getSeconds() + "秒"
+      this.timeshow = new Date()
     )
   }
 

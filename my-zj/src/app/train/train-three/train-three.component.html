@@ -1,4 +1,4 @@
-<p id="text"></p>
+<p id="text">{{timeshow | date:'yyyy年MM月dd日 HH是mm分ss秒'}}</p>
 <button (click)="globalMoodServiceService.getStart()">{{globalMoodServiceService.startValue}}</button>
 <button (click)="globalMoodServiceService.getStop()" [disabled]=globalMoodServiceService.boolean>停止</button>
 <span>{{globalMoodServiceService.num}}</span>

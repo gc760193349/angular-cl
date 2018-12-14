@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var  AMap: any;
 
 @Component({
   selector: 'app-train-four',
@@ -12,6 +13,13 @@ export class TrainFourComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.getMap ();
+  }
+  getMap(){
+    let map = new AMap.Map('container', {
+      resizeEnable: true,
+      zoom:11,
+      center: [116.397428, 39.90923]
+    });
   }
 }
