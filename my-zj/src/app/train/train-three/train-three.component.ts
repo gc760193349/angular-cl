@@ -10,7 +10,7 @@ import { GlobalMoodServiceService } from "../../global-mood-service.service";
 
 export class TrainThreeComponent implements OnInit, OnDestroy {
   private timeInterval: Subscription;
-  private timeshow:string =  '';
+  private timeshow:any =  '';
 
 
   constructor(private globalMoodServiceService: GlobalMoodServiceService,) {
