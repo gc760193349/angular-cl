@@ -10,7 +10,7 @@ import { GlobalMoodServiceService } from "../../global-mood-service.service";
 })
 export class TrainTwoComponent implements OnInit {
 
-  moentData = [];
+  momentData = [];
   globalData = [];
 
 
@@ -22,12 +22,12 @@ export class TrainTwoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.globalData = this.globalServe.GlobalData;
+    this.globalData = this.globalServe.globalData;
   }
 
   public getAData() {
     const randnum: number = Math.random() * 7;
-    this.moentData.push(this.moodServe.MonmentData[parseInt(String(randnum))]);
+    this.momentData.push(this.moodServe.MonmentData[parseInt(String(randnum))]);
   };
 
   public getGData() {

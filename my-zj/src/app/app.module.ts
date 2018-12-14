@@ -18,6 +18,8 @@ import { TrainOneComponent } from './train/train-one/train-one.component';
 import { TrainTwoComponent } from './train/train-two/train-two.component';
 import { PipeOnePipe } from './train/train-one/pipe-one.pipe';
 import { TrainThreeComponent } from './train/train-three/train-three.component';
+import { TrainFourComponent } from './train/train-four/train-four.component';
+import { GlobalMoodServiceService } from "./global-mood-service.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { TrainThreeComponent } from './train/train-three/train-three.component';
     TrainTwoComponent,
     PipeOnePipe,
     TrainThreeComponent,
+    TrainFourComponent,
     // LocalStorage,
   ],
   imports: [
@@ -41,6 +44,7 @@ import { TrainThreeComponent } from './train/train-three/train-three.component';
   ],
   providers: [
     AppService,
+    GlobalMoodServiceService
 
   ],
   bootstrap: [AppComponent]

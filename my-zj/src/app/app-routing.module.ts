@@ -12,6 +12,7 @@ import {TrainComponent} from "./train/train.component";
 import {TrainOneComponent} from "./train/train-one/train-one.component";
 import {TrainTwoComponent} from "./train/train-two/train-two.component";
 import {TrainThreeComponent} from "./train/train-three/train-three.component";
+import { TrainFourComponent } from "./train/train-four/train-four.component";
 
 const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
       {path:'train-one',component:TrainOneComponent},
       {path:'train-two',component:TrainTwoComponent},
       {path:'train-three',component:TrainThreeComponent},
+      {path:'train-four',component:TrainFourComponent}
     ]},
 
   {path: 'noFound', component: NofoundComponent},

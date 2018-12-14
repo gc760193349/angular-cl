@@ -1,3 +1,4 @@
-<p>
-  train-three works!
-</p>
+<p id="text"></p>
+<button (click)="globalMoodServiceService.getStart()">{{globalMoodServiceService.startValue}}</button>
+<button (click)="globalMoodServiceService.getStop()" [disabled]=globalMoodServiceService.boolean>停止</button>
+<span>{{globalMoodServiceService.num}}</span>
