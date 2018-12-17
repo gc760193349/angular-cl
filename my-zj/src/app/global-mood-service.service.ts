@@ -30,9 +30,8 @@ export class GlobalMoodServiceService {
   }
 
   getData() {
-    const random: number = Math.random() * 6;
-    // @ts-ignore
-    this.GlobalData.push(GlobalData[parseInt([random])]);
+    let random: number = Math.random() * 6;
+    this.globalData.push(GlobalData[parseInt(String(random))]);
     console.log(this.globalData);
   }
 
