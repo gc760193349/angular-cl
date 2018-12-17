@@ -17,7 +17,7 @@ export class TrainFourComponent implements OnInit {
     this.getMap();
   }
 
-  getMap() {
+  getMap(): void {
     let map = new AMap.Map('container', {
       resizeEnable: true,
       zoom: 30,
@@ -49,12 +49,12 @@ export class TrainFourComponent implements OnInit {
         offset: new AMap.Pixel(0, -31)
       });
 
-      function openInfoWin() {
+      function openInfoWin(): void {
         infoWindow.open(map, marker.getPosition());
       }
 
       //marker 点击时打开
-      AMap.event.addListener(marker, 'click', function () {
+      AMap.event.addListener(marker, 'click', function (): void {
         openInfoWin();
       });
 
@@ -63,8 +63,8 @@ export class TrainFourComponent implements OnInit {
 
     let placeSearch = new AMap.PlaceSearch();  //构造地点查询类
     let infoWindow = new AMap.AdvancedInfoWindow({});
-    map.on('hotspotclick', function (result) {
-      placeSearch.getDetails(result.id, function (status, result) {
+    map.on('hotspotclick', function (result: any): void {
+      placeSearch.getDetails(result.id, function (status: any, result: any): void {
         if (status === 'complete' && result.info === 'OK') {
           placeSearch_CallBack(result);
         }
@@ -72,19 +72,19 @@ export class TrainFourComponent implements OnInit {
     });
 
     //回调函数
-    function placeSearch_CallBack(data) { //infoWindow.open(map, result.lnglat);
+    function placeSearch_CallBack(data: any): void { //infoWindow.open(map, result.lnglat);
       let poiArr = data.poiList.pois;
       let location = poiArr[0].location;
       infoWindow.setContent(createContent(poiArr[0]));
       infoWindow.open(map, location);
     }
 
-    function createContent(poi) {  //信息窗体内容
+    function createContent(poi: any): string {  //信息窗体内容
       let s = [];
       s.push('<div class="info-title">' + poi.name + '</div><div class="info-content">' + "地址：" + poi.address);
       s.push("电话：" + poi.tel);
       s.push("类型：" + poi.type);
-      s.push('<div>');
+      s.push('</div>');
       return s.join("<br>");
     }
 
