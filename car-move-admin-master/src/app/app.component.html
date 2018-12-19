@@ -1,0 +1,26 @@
+<div class="main-layout">
+  <div class="main-header-layout">
+    <div class="main-logo"></div>
+    <div class="header-menu">
+      <button
+        [routerLink]="['','main']" [routerLinkActive]="['btn-active']">首页
+      </button>
+      <button
+        [routerLink]="['','link']" [routerLinkActive]="['btn-active']">系统
+      </button>
+      <button
+        [routerLink]="['','management']" [routerLinkActive]="['btn-active']">洗车
+      </button>
+    </div>
+    <div class="main-header">
+      <div class="main-header-user">
+      </div>
+      <span>管理员</span>
+      <div class="main-header-logout" (click)="onLogoutDivClick()"></div>
+      <div class="logout-btn" (click)="onLogoutDivClick()">退出</div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <app-prompt-box></app-prompt-box>
+  <app-confirmation-box></app-confirmation-box>
+</div>
